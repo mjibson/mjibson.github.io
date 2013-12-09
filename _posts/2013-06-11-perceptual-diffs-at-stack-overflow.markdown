@@ -14,13 +14,13 @@ After hearing about Brett Slatkin's discussion of [perceptual diffs](http://www.
 
 I decided to use the same deployment style as perscribed in the videos: when new code is pushed, UI tests run, and pdiffs run separately but in parallel. This wouldn't add any time to our commit-build-test-deploy cycle. And we could see if there were any problems before deploying to production.
 
-{% img /assets/images/pdiff-build.png %}
+<img src="/assets/images/pdiff-build.png">
 
 Our pdiff step is implemented as its own nunit test class in its own category (so it can be run separately from our UI tests). We have a list of URLS and run a selenium process to screenshot each of them in all of our supported languages. Some pages need user input, so we support running arbitrary code before screenshotting. Screenshots are saved on a network drive addressed by their URL, some other identifying string, and build number.
 
 The second step performs the actual diffing. A process recurses through the directories and compares any files with identical URLs and identifying strings, sorted by build number. We pdiff the latest two. There is a free implementation of pdiff online, but that requires calling out to an executable. It turns out writing a naive pdiff implementation is about [10 lines of code](https://github.com/mjibson/pdiff/blob/a5974e7e175f2ba53987c53b1596cb27fc85e5a6/pdiff.go#L67), so we just implmented it ourselves. It's trivial to read in two images and compare each pixel. To generate the diff image, start with black and write red if the pixels aren't the same. Now we have a list of pdiffs. A static html file showing the pdiffed images is generated. If there are differing images, we have a chat bot (named pdiffy) that announces to our developer room for review.
 
-{% img /assets/images/pdiff-chat.png %}
+<img src="/assets/images/pdiff-chat.png">
 
 # results
 

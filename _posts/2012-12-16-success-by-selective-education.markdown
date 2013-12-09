@@ -8,7 +8,7 @@ categories: education
 
 ## Or: how to win by not studying
 
-[{% img right /assets/images/mosfet.png 300 %}](http://en.wikipedia.org/wiki/File:MOSFET_Structure.png)
+[<img src="/assets/images/mosfet.png" style="float: right; width: 300px">](http://en.wikipedia.org/wiki/File:MOSFET_Structure.png)
 
 I once took a junior-level course in college about Metal-Oxide-Semiconductor Field-Effect Transistors. As part of the electrical engineering cirriculum, it was an important course. I had no interest whatsoever in the course, and to this day I'm still not sure what it was about. For example, I once showed up to class (I suspect my attendance was around or below 50%) to turn in a homework assignment and discovered that a midterm was scheduled for that day. I used the homework as the single sheet of notes we were allowed. I similarly neglected many of the courses I took.
 
@@ -22,7 +22,7 @@ I found that my grades were not related to the number of credits I was taking. S
 
 ## Impressions
 
-[{% img right /assets/images/opamp.png 300 %}](http://en.wikipedia.org/wiki/File:Op-amp_symbol.svg)
+[<img src="/assets/images/opamp.png" style="float: right; width: 300px">](http://en.wikipedia.org/wiki/File:Op-amp_symbol.svg)
 
 At the time I felt that I was making mistakes and slacking off. I thought: instead of programming I should be studying for those other classes. I felt like I was messing myself up as an engineer since I was completely ignoring half of my major courses. For example, after 6 years of electrical engineering courses, I still didn't know what an [op-amp](http://en.wikipedia.org/wiki/Operational_amplifier) was, even though I had studied them in at least 4 courses. I was convinced that I was making bad choices. I was paying to go to school and not study. I was spending my time doing something that I didn't plan on pursuing as a career (I wanted to design processors for Intel or AMD, not program full-time).
 

@@ -10,7 +10,7 @@ I would like to announce the release of appstats for go. Installation instructio
 
 A [demo site](http://schalmei-go.appspot.com/) is available.
 
-[{% img /assets/images/appstats-timeline.png %}](/assets/images/appstats-timeline.png)
+[<img src="/assets/images/appstats-timeline.png">](/assets/images/appstats-timeline.png)
 
 [Appstats](https://developers.google.com/appengine/docs/python/tools/appstats) is an incredibly useful library for the python (and java) runtimes. The go runtime has had no similar library, adding to the difficulty of developing significant apps. I'd like to describe a bit about how appstats is implemented (applies to python, as well) and where I think the go runtime is today.
 

@@ -10,7 +10,7 @@ categories: [fft, go, go-dsp, performance]
 
 ## Why the fast Fourier Transform is parallelizable
 
-[{% img right /assets/images/DIT-FFT-butterfly.png 300 %}](http://en.wikipedia.org/wiki/File:DIT-FFT-butterfly.png)
+[<img src="/assets/images/DIT-FFT-butterfly.png" style="float: right; width: 300px">](http://en.wikipedia.org/wiki/File:DIT-FFT-butterfly.png)
 
 The FFT is paralellizable because of how the "fast" part is implemented. Given an input of length `L`, if there exist integers `M` and `N` such that `L = M * N`, then the original problem (one transform of size `L`) can be restated as `M` problems of size `N`. These `M` problems can be run in parallel. For example, say I have an input of size 8. I can reform this as 2 inputs of size 4. These 2 inputs can be run in parallel.
 
@@ -28,11 +28,11 @@ The final solution addressed that problem by changing the number of jobs from `L
 
 The original, single-thread solution contains no multicore logic. It benchmarked at around 505ms. The graphs below show performance at `GOMAXPROCS = 6` and a FFT size of `2 ^ 20 = 1048576`.
 
-{% img /assets/images/fftmp-1.png %}
+<img src="/assets/images/fftmp-1.png">
 
 Above are results for the first two attempts. The blue line is the original, single-thread control. The green line shows the very poor performance at small block sizes. The red line shows similar performance as green for large block sizes but that it was able to handle smaller block sizes better (but still not great). Minimum runtime was 1.7x faster (267ms minimum).
 
-{% img /assets/images/fftmp-2.png %}
+<img src="/assets/images/fftmp-2.png">
 
 Here we see the final solution with indexed worker groups. Minimum runtime was 252ms (2.0x speedup). Not the 6x increase I wanted, but it's not bad.
 
