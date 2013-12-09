@@ -3,7 +3,7 @@ email: matt.jibson@gmail.com
 markdown: redcarpet
 pygments: true
 url: http://mattjibson.com
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title/
 
 # Disqus Comments
 disqus_short_name: mjibson-blog
