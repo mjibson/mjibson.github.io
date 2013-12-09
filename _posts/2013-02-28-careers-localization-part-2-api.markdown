@@ -10,9 +10,9 @@ categories: [careers, localization]
 
 ## Markup
 
-We chose to use gettext-style translation strings (i.e., not resource files where strings are identified somehow, instead we just indicate the English string right where it will be shown). We chose a syntax that allows dynamic variable replacement and easy pluralization, and can work similarly in JavaScript and C#. Here's what we came up with:
+We chose to use gettext-style translation strings (i.e., not resource files where strings are identified somehow, instead we just indicate the English string right where it will be shown). We chose a syntax that allows dynamic variable replacement and easy pluralization, and can work similarly in JavaScript and C#. Here's what we came up with for C#:
 
-``` cpp C#
+``` cpp
 _s("Unicorns prance") // "Unicorns prance"
 _s("$name$ have horns", new { name = "Unicorns" }) // "Unicorns have horns"
 _s("There are $__count$ unicorns", new { __count = 1 }) // "There is 1 unicorn"
@@ -23,7 +23,9 @@ _s(@"
 	supported.") // "Multi line supported." (whitespace collapsed)
 ```
 
-``` js JavaScript
+And for JavaScript:
+
+``` js
 _s('Unicorns prance') // "Unicorns prance" (single or double quotes accepted - any valid JavaScript string)
 _s("$name$ have horns", { name: "Unicorns" }) // "Unicorns have horns"
 _s('There are $__count$ unicorns', { __count: 1 }) // "There is 1 unicorn"
@@ -32,7 +34,7 @@ _s("There is a unicorn", { __count: 3 }) // "There are some unicorns"
 
 We chose a function named `_s` that takes a string and an optional values object used for variable replacement. There is a special `__count` member of the values object which, if it exists, indicates to our translation engine that this is a pluralizeable string. Calls to `_s` could be in our C# files anywhere in the tree. They could also be in our razor views:
 
-``` cpp Razor
+``` cpp
 <div>
 	@_s("translate this")
 </div>
@@ -40,7 +42,7 @@ We chose a function named `_s` that takes a string and an optional values object
 
 Finally, it also supports existing objects:
 
-``` cpp C#
+``` cpp
 class User {
 	public string Name { get; set; }
 }
@@ -51,11 +53,7 @@ _s("$Name$ is here!", user);
 
 ## Markdown
 
-Requirement 5 from part 1 is to support markdown formatting. The purpose of this requirement was so that we would never send HTML to translators. We do not trust someone else writing our HTML. Thus, we needed support for simplified markdown (only bold, italics, and links). Out of this grew the `_m` function (m for markdown, in contrast to s for string in `_s`). This puts certain tweets in perspective.
-
-{% blockquote @kevinmontrose https://twitter.com/kevinmontrose/status/233392144193294336 %}
-And so begins the drive to redefine "S&M" in the company lexicon.
-{% endblockquote %}
+Requirement 5 from part 1 is to support markdown formatting. The purpose of this requirement was so that we would never send HTML to translators. We do not trust someone else writing our HTML. Thus, we needed support for simplified markdown (only bold, italics, and links). Out of this grew the `_m` function (m for markdown, in contrast to s for string in `_s`). This puts [certain tweets](https://twitter.com/kevinmontrose/status/233392144193294336) in perspective.
 
 With `_m`, we can do things like:
 
