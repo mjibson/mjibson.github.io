@@ -1,0 +1,21 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div id="home">
+	<h1>Blog Posts</h1>
+	<ul class="posts">
+		{% for post in site.posts %}
+			<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+	<h1>Projects</h1>
+	<ul class="posts">
+		<li><a href="https://www.goread.io/">go read:</a> A Google Reader-like RSS reader.</li>
+		<li><a href="https://github.com/MiniProfiler/go">miniprofiler:</a> A simple but effective mini-profiler for Go.</li>
+		<li><a href="https://github.com/mjibson/goon">goon:</a> Autocaching interface to the Google App Engine datastore for Go.</li>
+		<li><a href="https://github.com/mjibson/go-dsp">go-dsp:</a> Digital signal processing for Go.</li>
+		<li><a href="https://github.com/mjibson/appstats">appstats:</a> Appstats for Go on Google App Engine.</li>
+	</ul>
+</div>
