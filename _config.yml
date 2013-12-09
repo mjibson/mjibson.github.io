@@ -1,4 +1,12 @@
 name: Matt Jibson
 markdown: redcarpet
 pygments: true
+url: htp://mattjibson.com
 permalink: /blog/:year/:month/:day/:title
+
+# Disqus Comments
+disqus_short_name: mjibson-blog
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-26568697-1
