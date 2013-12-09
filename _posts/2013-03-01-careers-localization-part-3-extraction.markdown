@@ -26,7 +26,7 @@ Our first solution was the hand-built parser. It worked reasonbly well, but ther
 
 The C# team at Microsoft has been working on a project called [Roslyn](http://msdn.microsoft.com/en-us/vstudio/roslyn.aspx). It is a programmatic way to access the syntax tree and semantic model of C# files. That means that we can hand it a C# file and then search through it looking for certain kinds of things, and act on them. Roslyn comes with a SyntaxWalker class that walks over each node. You can override the one you want. In our case, we want any invocation (function call) named `_s` or `_m`:
 
-``` cpp C#
+``` cpp
 private static readonly IEnumerable<string> SINGLE_LINE = new[] { "_s", "_m" };
 public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 {
