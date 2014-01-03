@@ -14,7 +14,7 @@ After hearing about Brett Slatkin's discussion of [perceptual diffs](http://www.
 
 I decided to use the same deployment style as perscribed in the videos: when new code is pushed, UI tests run, and pdiffs run separately but in parallel. This wouldn't add any time to our commit-build-test-deploy cycle. And we could see if there were any problems before deploying to production.
 
-<img src="/assets/images/pdiff-build.png">
+<img style="width: 100%" src="/assets/images/pdiff-build.png">
 
 Our pdiff step is implemented as its own nunit test class in its own category (so it can be run separately from our UI tests). We have a list of URLS and run a selenium process to screenshot each of them in all of our supported languages. Some pages need user input, so we support running arbitrary code before screenshotting. Screenshots are saved on a network drive addressed by their URL, some other identifying string, and build number.
 

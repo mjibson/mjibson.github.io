@@ -10,7 +10,7 @@ I would like to announce the release of [Go Read](http://www.goread.io). It as a
 
 [Try it out:](http://www.goread.io)
 
-[<img src="/assets/images/goread-all.png">](http://www.goread.io/)
+[<img style="width: 100%" src="/assets/images/goread-all.png">](http://www.goread.io/)
 
 Specifically, I wanted:
 
