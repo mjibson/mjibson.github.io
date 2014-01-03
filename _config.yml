@@ -1,12 +1,13 @@
-name: Matt Jibson
-email: matt.jibson@gmail.com
-markdown: redcarpet
-pygments: true
-url: http://mattjibson.com
-permalink: /blog/:year/:month/:day/:title/
+markdown:         redcarpet
+pygments:         true
+permalink:        /blog/:year/:month/:day/:title/
+title:            Matt Jibson
+author:
+  name: Matt Jibson
+  email: matt.jibson@gmail.com
+tagline:          'blog'
+description:      'Dev at Stack Overflow. Pianist & organist.'
+url:              http://mattjibson.com
+paginate:         5
 
-# Disqus Comments
-disqus_short_name: mjibson-blog
-
-# Google Analytics
 google_analytics_tracking_id: UA-26568697-1
