@@ -8,6 +8,5 @@ author:
 tagline:          'blog'
 description:      'Dev at Stack Overflow. Pianist & organist.'
 url:              http://mattjibson.com
-paginate:         5
 
 google_analytics_tracking_id: UA-26568697-1
