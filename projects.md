@@ -1,7 +1,13 @@
 ---
 layout: page
-title: Projects
+title: About
 ---
+
+* [resume](https://careers.stackoverflow.com/mjibson)
+* [stackoverflow](http://stackoverflow.com/users/864236/mjibson)
+* [github](https://github.com/mjibson/)
+
+## projects
 
 * [go read](https://www.goread.io/) Google Reader-like RSS reader
 * [miniprofiler](https://github.com/MiniProfiler/go) simple but effective mini-profiler for Go
