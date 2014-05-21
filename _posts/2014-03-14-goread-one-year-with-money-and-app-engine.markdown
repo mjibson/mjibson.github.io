@@ -33,7 +33,7 @@ Forcing people to pay was the best choice I have made. Due to so many users leav
 
 # decreasing expense
 
-For the App Engine-inclined of you, let's talk about quotas. App Enigne provides a generous free quota that allows you to test almost any app on Google's production servers with real data. Until you get some real users you'll be below the limit. Go Read works on the free tier for some hundreds of feeds (number of users is not a factor for Go Read).
+For the App Engine-inclined of you, let's talk about quotas. App Engine provides a generous free quota that allows you to test almost any app on Google's production servers with real data. Until you get some real users you'll be below the limit. Go Read works on the free tier for some hundreds of feeds (number of users is not a factor for Go Read).
 
 For the first few weeks, App Engine was costing me around $50/day. This was right after the HN and gizmodo posts. I got 20k users signed up in 3 days. That was around 800k feeds, and a few million new stories per day. Lots of data coming in. Even updating the feeds at 20/s wasn't enough to keep up. Today, I have a few hundred active users and probably a few thousand feeds. Costs have dropped to about $6/day. Quite manageable.
 
