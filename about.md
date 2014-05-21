@@ -3,9 +3,11 @@ layout: page
 title: About
 ---
 
+* [matt.jibson@gmail.com](mailto:matt.jibson@gmail.com)
 * [resume](https://careers.stackoverflow.com/mjibson)
 * [stackoverflow](http://stackoverflow.com/users/864236/mjibson)
 * [github](https://github.com/mjibson/)
+* [twitter](https://twitter.com/mjibson)
 
 ## projects
 
