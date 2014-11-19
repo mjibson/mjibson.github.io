@@ -22,7 +22,7 @@ I wanted a program that:
 4. has reasonable-sized diffs when files changed
 5. is vendoring-friendly
 
-Vendoring-friendly means that when I run Godep or
+Vendoring-friendly means that when I run [godep](https://github.com/tools/godep) or
 [party](https://github.com/mjibson/party), the static embed file will not
 change. This means it must not have any third-party imports (since their
 import path will be rewritten during `goimports`, and thus different than
