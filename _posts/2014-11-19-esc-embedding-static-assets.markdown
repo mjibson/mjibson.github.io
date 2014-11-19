@@ -14,13 +14,13 @@ writing my own.
 
 # requirements
 
-I wanted a program that would:
+I wanted a program that:
 
-1. take some directories and embed all files in them in a way that was compatible with http.FileSystem
-2. could optionally be disabled for use with the local file system for local development
-3. not change the output file on subsequent runs
-4. have reasonable-sized diffs when files changed
-5. vendoring-friendly
+1. can take some directories and recursively embed all files in them in a way that was compatible with http.FileSystem
+2. can optionally be disabled for use with the local file system for local development
+3. will not change the output file on subsequent runs
+4. has reasonable-sized diffs when files changed
+5. is vendoring-friendly
 
 Vendoring-friendly means that when I run Godep or
 [party](https://github.com/mjibson/party), the static embed file will not
