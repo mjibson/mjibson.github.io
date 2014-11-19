@@ -5,7 +5,7 @@ date: 2014-11-19 00:00
 categories: [esc, go]
 ---
 
-With the release of [Bosun][http://bosun.org], I spent some time making
+With the release of [Bosun](http://bosun.org), I spent some time making
 the installation process pleasant. This included embedding static web
 assets directly into the go binary. I have done this before with appstats
 and miniprofiler, but wanted to see the current state of public offerings,
