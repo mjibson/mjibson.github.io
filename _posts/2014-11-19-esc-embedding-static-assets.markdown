@@ -49,11 +49,10 @@ suggesting that this project is not highly used by its author.
 # [github.com/jteeuwen/go-bindata](https://github.com/jteeuwen/go-bindata)
 
 go-bindata has an impressive feature list, and met most of my requirements
-(good diffs, local dev mode, kind of vendoring-friendly). However it did not
-recurse into subdirectories, and the http.FileSystem interface is done by a
+(good diffs, local dev mode, kind of vendoring-friendly). However its http.FileSystem interface is done by a
 different developer, and requires specifying many things that were already
 specified in the bindata invocation, leading to easy errors and annoying
-configuration.
+configuration. I wanted something that would produced a fully self-contained http.FileSystem interface.
 
 # [github.com/GeertJohan/go.rice](https://github.com/GeertJohan/go.rice)
 
