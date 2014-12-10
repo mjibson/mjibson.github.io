@@ -17,3 +17,9 @@ title: About
 * [go-dsp](https://github.com/mjibson/go-dsp) digital signal processing for Go
 * [appstats](https://github.com/mjibson/appstats) appstats for Go on Google App Engine
 * [Organ Sound Synthesis by Harmonic Interpolation](/pubs/schalmei) [[pdf](/pubs/schalmei/schalmei.pdf)]
+
+## talks
+
+* [bosun lessons](http://go-talks.appspot.com/github.com/mjibson/talks/bosun-lessons/bosun-lessons.slide#1)
+* [nintendo music emulation with go](http://go-talks.appspot.com/github.com/mjibson/talks/nintendo-music-emulation-go/nintendo-music-emulation-go.slide#1)
+* [go on app engine](http://go-talks.appspot.com/github.com/mjibson/talks/go-on-appengine/go-on-appengine.slide#1)
