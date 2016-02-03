@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Redis Over CockroachDB"
-date: 2015-02-03 00:00
+date: 2016-02-03 00:00
 categories: [redis, go]
 ---
 
