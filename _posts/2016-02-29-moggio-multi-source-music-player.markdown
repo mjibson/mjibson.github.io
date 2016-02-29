@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Implementing mog: a cross-platform, multi-source music player in Go"
+title: "Implementing moggio: a cross-platform, multi-source music player in Go"
 date: 2016-02-29 00:00
-categories: [mog, go]
+categories: [moggio, go]
 ---
 
-Today I am announcing the release of [mog 0.1.0](http://mogg.io/). mog
+Today I am announcing the release of [moggio 0.1.0](http://moggio.io/). moggio
 is a cross-platform, multi-source music player written in
 [Go](https://golang.org/). It runs on Windows, Linux, and Mac, can play
 from over a dozen sources (Google Music, Soundcloud, etc.) and from as many
@@ -13,8 +13,8 @@ formats (MP3, Vorbis, etc.). Writing a cross-platform GUI application that
 also needed access to the sound hardware was a new problem for me, and I
 would like to share what I learned.
 
-[<img src="/assets/images/mog.png" style="width:
-100%">](/assets/images/mog.png)
+[<img src="/assets/images/moggio.png" style="width:
+100%">](/assets/images/moggio.png)
 
 # Motivation
 
@@ -44,10 +44,8 @@ use my keyboard's media keys, or whatever else I wanted, to control all of
 this music listening. No more clicking into the Google Music or Soundcloud
 tab just to hit pause or next.
 
-Lastly I wanted this application to be in Go. This had all kinds of hard
-problems, and was lots of fun to build. I called it mog because 1) it's a
-**M**usic player, 2) it's written in **GO**, 3) and Mog is the name of a
-character from one of the Super Nintendo games I most enjoy listening to.
+Lastly I wanted this application to be in Go. All these requirements together
+had all kinds of hard problems, and was lots of fun to build.
 
 # Cross-Platform Desktop Interface
 
@@ -120,8 +118,8 @@ system, meaning it can be cross compiled without a C compiler from Linux.
 
 # Summary
 
-Mog is [open source on GitHub](https://github.com/mjibson/mog). I use it
+Mog is [open source on GitHub](https://github.com/mjibson/moggio). I use it
 everyday to play most of my music, and it does nearly everything I need it
 to. It's still got some stability issues and rough edges, but it does what
 it says on the box. If you're interested in contributing, some open problems
-are Youtube and AAC support. I hope mog improves how you listen to music.
+are Youtube and AAC support. I hope moggio improves how you listen to music.
