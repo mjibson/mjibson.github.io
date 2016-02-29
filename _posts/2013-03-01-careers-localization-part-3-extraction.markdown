@@ -10,9 +10,9 @@ categories: [careers, localization, roslyn, uglifyjs, node]
 
 The difficulty is to extract all of the strings so that they can be sent to translators. Compounding this difficulty, we also must make sure to send the correct number of **plural forms** to the translators. Look at the example below. `__count` does not appear in the translated string, only in the values object. This means we must, at extraction time, understand these value objects and be able to reason about them---we must know their types.
 
-``` cpp
+~~~ cpp
 _s("There is a unicorn", new { __count = 3 }) // "There are some unicorns"
-```
+~~~
 
 There are a few bad ways to do this:
 
@@ -26,7 +26,7 @@ Our first solution was the hand-built parser. It worked reasonbly well, but ther
 
 The C# team at Microsoft has been working on a project called [Roslyn](http://msdn.microsoft.com/en-us/vstudio/roslyn.aspx). It is a programmatic way to access the syntax tree and semantic model of C# files. That means that we can hand it a C# file and then search through it looking for certain kinds of things, and act on them. Roslyn comes with a SyntaxWalker class that walks over each node. You can override the one you want. In our case, we want any invocation (function call) named `_s` or `_m`:
 
-``` cpp
+~~~ cpp
 private static readonly IEnumerable<string> SINGLE_LINE = new[] { "_s", "_m" };
 public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 {
@@ -39,11 +39,11 @@ public override void VisitInvocationExpression(InvocationExpressionSyntax node)
 			// save it somewhere
 	}
 }
-```
+~~~
 
 Now we're trying to create a new `StringInfo` (just a container class). We need to examine our `node.ArgumentList` and see if the first argument is a string. We use C#'s dynamic feature coupled with various ways to call `StringInfo.Create` to easily support different types of arguments (noted in comments above the functions):
 
-```
+~~~
 // _s("string", object) (object may contain __count)
 public static StringInfo Create(ArgumentListSyntax args, ISemanticModel model)
 {
@@ -73,11 +73,11 @@ public static StringInfo Create(LiteralExpressionSyntax literal, ISemanticModel 
 		Count = false,
 	};
 }
-```
+~~~
 
 Ok, now we've got our string. Next we need to figure out if `__count` is part of the object. We've implemented various ways to determine `HasCount()`, as referenced above on line 14. Again, C#'s dynamic proves useful.
 
-```
+~~~
 private const string COUNT = "__count";
 
 // _s("string", new { __count = 1 })
@@ -118,7 +118,7 @@ public static bool HasCount(ExpressionSyntax arg, ISemanticModel model)
 {
 	return false;
 }
-```
+~~~
 
 The above tries all variants (that were in our code) that might contain `__count` somehow. The use of dynamic allows us to not care about the kind of expression, which is determined during runtime, and then the appropriate version of `HasCount()` is called. Here's [a gist](https://gist.github.com/mjibson/5052106#file-extractor-cs) of it all (it's got some other features not listed here).
 
