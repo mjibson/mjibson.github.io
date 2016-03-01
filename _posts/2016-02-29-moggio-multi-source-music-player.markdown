@@ -5,7 +5,7 @@ date: 2016-02-29 00:00
 categories: [moggio, go]
 ---
 
-Today I am announcing the release of [moggio 0.1.0](http://moggio.io/). moggio
+Today I am announcing the release of [moggio 0.1.0](http://mogg.io/). moggio
 is a cross-platform, multi-source music player written in
 [Go](https://golang.org/). It runs on Windows, Linux, and Mac, can play
 from over a dozen sources (Google Music, Soundcloud, etc.) and from as many
