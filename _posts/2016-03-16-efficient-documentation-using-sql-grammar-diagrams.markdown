@@ -7,15 +7,27 @@ categories: [cockroachdb]
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/efficient-documentation-using-sql-grammar-diagrams/).)_
 
-As CockroachDB approaches beta, user documentation has become increasingly important, and one of the meatiest requirements is documentation of our SQL implementation. For inspiration, I researched how other databases have documented SQL. The most effective example I found was [SQLite’s grammar diagrams](https://sqlite.org/lang_altertable.html). These diagrams feature easy-to-understand [railroad diagrams](https://en.wikipedia.org/wiki/Syntax_diagram) showing the possible options for a SQL statement. Compared to a [text representation](http://www.postgresql.org/docs/current/static/sql-altertable.html), these visual diagrams give users an intuitive way to explore the grammar and discover features.
+As CockroachDB approaches beta, user documentation has become increasingly important, and one of the meatiest requirements is documentation of our SQL implementation. For inspiration, I researched how other databases have documented SQL. The most effective example I found was [SQLite’s grammar diagrams](https://sqlite.org/lang_altertable.html).
+
+<img src="/assets/images/sqlite-alter.png">
+
+These diagrams feature easy-to-understand [railroad diagrams](https://en.wikipedia.org/wiki/Syntax_diagram) showing the possible options for a SQL statement. Compared to a [text representation](http://www.postgresql.org/docs/current/static/sql-altertable.html), these visual diagrams give users an intuitive way to explore the grammar and discover features.
+
+<img src="/assets/images/postgres-alter.png">
 
 ## Converting Grammar into Images with Yacc and EBNF
 
 There are various programs that can take a well-specified grammar file and convert it into images. Of the ones I saw, I was most impressed with the [Railroad Diagram Generator](http://www.bottlecaps.de/rr/ui). It produces linked SVG images that can easily be embedded into a web page and manipulated. However, this generator requires input in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form) form. The [CockroachDB grammar](https://github.com/cockroachdb/cockroach/blob/master/sql/parser/sql.y) is defined in a yacc file, from which the `yaac` program generates source code that parses SQL. As yacc has a specified format, it is straightforward to parse and convert to EBNF. One program that does this is `yyextract` from the `cutils` package on many Linux distributions. `yyextract` produces just BNF files. But with some short regexes, it was possible to convert our `sql.y` into a valid EBNF file that the generator could understand.
 
+<img src="/assets/images/grant-ebnf.png">
+
 ## Inlining and Simplification AKA Documentation for Humans
 
-With the proof-of-concept complete, I had much more work left to make these diagrams useful to humans. We now had one huge HTML page with every possible option, but what we really needed was something similar to what SQLite provides: a single image that displays top-level, useful information with options to go deeper. Taking `ALTER TABLE` as an example, it was clear where this would get tricky. `ALTER TABLE` contains a reference to `alter_table_cmds`, which allows any number of `alter_table_cmd` references separated by commas. That’s at least three different statements just to figure out what `ALTER TABLE` can do. Instead of clicking through to each of those, the useful ones should be inlined into the top `ALTER TABLE` statement. That is, instead of a referencing other statements, they should be included directly. I accomplished this by writing my own parser for EBNF, parsing the output of `yyextract`, modifying it, and then feeding it into the diagram generator. This reduced the depth of the statements and made them much more usable. I worked in other helpful simplifications as well. For example, I used a simplification rule to convert awkwardly-defined lists into a nice form with a feedback loop. However, there are other simplifications I would still like to implement. For example, many statements have `IF EXISTS` expressions. Currently, these statements have two expressions: one with and one without the `IF EXISTS` clause. A simplification that combines these two expressions into one would further reduce the complexity of some diagrams.
+With the proof-of-concept complete, I had much more work left to make these diagrams useful to humans. We now had one huge HTML page with every possible option, but what we really needed was something similar to what SQLite provides: a single image that displays top-level, useful information with options to go deeper. Taking `ALTER TABLE` as an example, it was clear where this would get tricky. `ALTER TABLE` contains a reference to `alter_table_cmds`, which allows any number of `alter_table_cmd` references separated by commas. That’s at least three different statements just to figure out what `ALTER TABLE` can do. Instead of clicking through to each of those, the useful ones should be inlined into the top `ALTER TABLE` statement. That is, instead of a referencing other statements, they should be included directly. I accomplished this by writing my own parser for EBNF, parsing the output of `yyextract`, modifying it, and then feeding it into the diagram generator. This reduced the depth of the statements and made them much more usable. I worked in other helpful simplifications as well. For example, I used a simplification rule to convert awkwardly-defined lists into a nice form with a feedback loop.
+
+<img src="/assets/images/alter_table_cmds.png">
+
+However, there are other simplifications I would still like to implement. For example, many statements have `IF EXISTS` expressions. Currently, these statements have two expressions: one with and one without the `IF EXISTS` clause. A simplification that combines these two expressions into one would further reduce the complexity of some diagrams.
 
 ## How to Diagram Unimplemented SQL Statements
 
@@ -24,3 +36,5 @@ As CockroachDB is a new project, many esoteric or difficult parts of the full SQ
 ## Summary
 
 These tools allow us to automatically generate all of the SQL diagrams in our documentation. We have a document describing the [full grammar](https://www.cockroachlabs.com/docs/sql-grammar.html), as well as smaller pages listing [single statements](https://www.cockroachlabs.com/docs/create-database.html). All diagrams link references to the full grammar, making it simple to explore. The code for this is in our [documentation repository](https://github.com/cockroachdb/docs/tree/gh-pages/generate). Now, anytime we modify the SQL grammar to add a new feature, all the diagrams can be regenerated with a single command.
+
+<img src="/assets/images/drop_stmt.png">
