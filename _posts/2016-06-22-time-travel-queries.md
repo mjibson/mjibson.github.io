@@ -6,6 +6,7 @@ categories: [cockroachdb]
 ---
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/time-travel-queries-select-witty_subtitle-the_future/).)_
+
 # Time-Travel Queries: SELECT witty_subtitle FROM THE FUTURE
 
 In our most recent beta, we added a new feature: time-travel queries. These are `SELECT` queries where you can specify a timestamp, and the data returned will be the data as it was at that time. This has various uses including backups, undo, historical reporting. Although this has been added to the [SQL:2011 standard](https://en.wikipedia.org/wiki/SQL:2011#Temporal_support), I'm not aware of any database that has implemented it. I'd like to introduce this feature: what it is, why we built it, and details about how it works for those interested in CockroachDB's lower layers.
