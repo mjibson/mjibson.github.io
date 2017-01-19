@@ -7,8 +7,6 @@ categories: [cockroachdb]
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/testing-random-valid-sql-in-cockroachdb/).)_
 
-Test change.
-
 Some months ago I started work on a way to test random SQL statements with CockroachDB. This is important to expose unintended behavior in our server. For example, we want to prevent valid SQL statements from unexpectedly crashing the server or using all of the CPU or memory. We have already performed some small-scale fuzz testing, but fuzz testing often produces un-parseable input since it modifies bytes (although some fuzzers like AFL do attempt to produce clean input). The goal here was to produce **valid** SQL statements that the parser would accept and the system would then execute. These statements would essentially attempt to try various combinations of valid SQL to panic or otherwise render the system unusable (like consuming all CPU).
 
 ## Generation
