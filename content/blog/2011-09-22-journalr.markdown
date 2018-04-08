@@ -1,0 +1,7 @@
+---
+title: "journalr"
+date: 2011-09-22
+slug: "journalr"
+---
+
+I just launched [journalr](http://journalr.org), an online journal site. There are almost no online journal sites, and journalr strives to remedy this and encourage more journal writing. It's in the early stages, but it's good enough to use. I have already begun transcribing my journals from my mission when I spent 2 years in Brazil, and have enjoyed using journalr.
