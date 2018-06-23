@@ -11,6 +11,7 @@ I'm a dev at [Cockroach Labs](https://www.cockroachlabs.com/). Previously at [St
 
 ## Projects
 
+* [sqlfmt](https://sqlfum.pt/) SQL width-aware pretty printer
 * [hots.dog](https://hots.dog/) Heroes of the Storm stats aggregator
 * [moggio](https://github.com/mjibson/moggio) multi-source, multi-OS music player
 * [go read](https://www.goread.io/) Google Reader-like RSS reader
