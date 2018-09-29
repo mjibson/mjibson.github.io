@@ -2,9 +2,9 @@
 {{.Content}}
 {{ with .Site.GetPage "section" "blog" }}
 	{{ range .Pages }}
-		<p class="link-title">
-			<a href="{{.URL}}">{{.Title}}</a>
-			<br><small>{{dateFormat "02 Jan 2006" .Date}}</small>
+		<p class="pt-5">
+			<a href="{{.URL}}" class="text-blue-dark">{{.Title}}</a>
+			<br><span class="text-grey-dark text-lg">{{dateFormat "02 Jan 2006" .Date}}</span>
 		</p>
 	{{ end }}
 {{ end }}

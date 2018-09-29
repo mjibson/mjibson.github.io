@@ -12,7 +12,19 @@
 		gtag('config', 'UA-26568697-1');
 	</script>
 	<title>{{.Title}}</title>
+	<link href="/tailwind.min.css" rel="stylesheet">
 	<style>
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	.small {
+		@apply text-lg text-grey-darker;
+	}
+	
+	/*
 	body {
 		max-width: 38rem;
 		padding-left: 1rem;
@@ -23,18 +35,8 @@
 		font-size: 20px;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 	}
-	.link-title a {
-		color: #303030;
-	}
 	small {
 		color: #9a9a9a;
-	}
-	a {
-		color: #268bd2;
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: underline;
 	}
 	pre, code {
 		background-color: #f9f9f9;
@@ -50,17 +52,20 @@
 	.blog-title {
 		margin-bottom: 10px;
 	}
+	*/
 	</style>
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="alternate" type="application/atom+xml" href="/blog/index.xml">
 </head>
-<body>
-	<h3 class="title link-title">
-		<a href="/">
-			Matt Jibson
-			<small>blog</small>
-		</a>
-	</h3>
-	{{ block "main" . }}{{ end }}
+<body class="black">
+	<div class="container mx-auto max-w-lg font-sans text-xl">
+		<h3 class="border-b border-grey-darkest">
+			<a href="/">
+				Matt Jibson
+				<span class="text-lg">blog</span>
+			</a>
+		</h3>
+		{{ block "main" . }}{{ end }}
+	</div>
 </body>
 </html>
