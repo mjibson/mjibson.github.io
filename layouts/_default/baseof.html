@@ -20,6 +20,7 @@
 			gtag('config', 'UA-26568697-1');
 		</script>
 		<title>{{.Title}}</title>
+		<link rel="stylesheet" href="/style.css" />
 		<style>
 			body {
 				max-width: 38rem;
@@ -27,19 +28,18 @@
 				padding-right: 1rem;
 				margin-left: auto;
 				margin-right: auto;
-				color: #303030;
 				font-size: 20px;
 				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
 					Arial, sans-serif;
 			}
 			.link-title a {
-				color: #303030;
+				color: var(--emph-high);
 			}
 			small {
-				color: #9a9a9a;
+				color: var(--emph-medium);
 			}
 			a {
-				color: #268bd2;
+				color: var(--primary);
 				text-decoration: none;
 			}
 			a:hover {
@@ -47,42 +47,21 @@
 			}
 			pre,
 			code {
-				background-color: #f9f9f9;
-				color: #bf616a;
+				background-color: var(--dp01);
+				color: var(--secondary);
 				font-size: 1rem;
 			}
+			pre code {
+				background-color: transparent;
+			}
 			.title {
-				border-bottom: 1px solid #9a9a9a;
+				border-bottom: 1px solid var(--disabled);
 			}
 			.title a {
 				text-decoration: none;
 			}
 			.blog-title {
 				margin-bottom: 10px;
-			}
-			@media (prefers-color-scheme: dark) {
-				body {
-					color: #ffffff;
-					background-color: #121212;
-				}
-				a {
-					color: #bb86cf;
-				}
-				.link-title a {
-					color: #ffffff;
-				}
-				small {
-					color: rgba(255, 255, 255, 0.5);
-				}
-				pre,
-				code {
-					color: #03dac5;
-					ebackground: rgba(255, 255, 255, 0.14);
-					background: #1d1d1d;
-				}
-				.title {
-					border-bottom: 1px solid #9a9a9a66;
-				}
 			}
 		</style>
 		<link rel="shortcut icon" href="/favicon.ico" />
