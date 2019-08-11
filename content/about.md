@@ -11,10 +11,11 @@ I'm a dev at [Cockroach Labs](https://www.cockroachlabs.com/). Previously at [St
 
 ## Projects
 
+* [ct](https://ct.mattjibson.com) Cocktail tracker
 * [sqlfmt](https://sqlfum.pt/) SQL width-aware pretty printer
-* [hots.dog](https://hots.dog/) Heroes of the Storm stats aggregator
+* [hots.dog](https://github.com/mjibson/hots.dog/) Heroes of the Storm stats aggregator (shut down)
 * [moggio](https://github.com/mjibson/moggio) multi-source, multi-OS music player
-* [go read](https://goread.io/) Google Reader-like RSS reader
+* [go read](https://github.com/mjibson/goread) Google Reader-like RSS reader (shut down)
 * [Organ Sound Synthesis by Harmonic Interpolation](/pubs/schalmei) [[pdf](/pubs/schalmei/schalmei.pdf)]
 
 ## Talks
