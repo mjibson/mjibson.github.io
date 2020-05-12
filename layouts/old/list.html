@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{.Content}}
-{{ with .Site.GetPage "section" "blog" }}
+{{ with .Site.GetPage "section" "old" }}
 	{{ range .Pages }}
 		<p class="link-title">
 			<a href="{{.URL}}">{{.Title}}</a>
@@ -8,6 +8,4 @@
 		</p>
 	{{ end }}
 {{ end }}
-<p><a href="/blog/index.xml">RSS</a></p>
-<p><a href="/old">archived posts</a></p>
 {{ end }}
