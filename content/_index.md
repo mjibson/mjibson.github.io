@@ -1,5 +1,5 @@
 ---
-title: "Matt Jibson's blog"
+title: "Matt Jibson"
 ---
 
 [about](/about)

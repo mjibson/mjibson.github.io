@@ -2,7 +2,11 @@
 title: "About Matt Jibson"
 ---
 
-I'm a dev at [Cockroach Labs](https://www.cockroachlabs.com/). Previously at [Stack Overflow](https://stackoverflow.com/) and [CoreOS](https://coreos.com/).
+I'm a dev at [Materialize](https://materialize.io/).
+Previously at
+[Cockroach Labs](https://www.cockroachlabs.com/),
+[Stack Overflow](https://stackoverflow.com/),
+and [CoreOS](https://coreos.com/).
 
 * [matt.jibson@gmail.com](mailto:matt.jibson@gmail.com)
 * [resume](/resume.pdf)
