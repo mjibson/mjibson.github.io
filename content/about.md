@@ -12,6 +12,7 @@ Previously:
 * [resume](/resume.pdf)
 * [github](https://github.com/mjibson/)
 * [twitter](https://twitter.com/mjibson)
+* <a href="https://hachyderm.io/@mjibson" rel="me">mastadon</a>
 
 ## Projects
 
