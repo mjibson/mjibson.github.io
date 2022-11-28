@@ -1,9 +1,9 @@
 ---
 title: "Survey of Rounding Implementations in Go"
 date: 2017-07-06
-slug: "rounding"
-aliases:
-  - /blog/2017/07/06/rounding/
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/rounding-implementations-in-go/).)_

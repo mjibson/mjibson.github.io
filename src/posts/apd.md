@@ -1,9 +1,9 @@
 ---
 title: "apd: An Arbitrary-Precision Decimal Package for Go"
 date: 2017-03-15
-slug: "apd"
-aliases:
-  - /blog/2017/03/15/apd/
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/apd-arbitrary-precision-decimal-package/).)_

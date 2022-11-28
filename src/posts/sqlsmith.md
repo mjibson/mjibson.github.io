@@ -16,7 +16,7 @@ In order to make it past the lexer and actually into the parser itself, we follo
 
 Consider the path now. We started with random bytes that didn’t make it past the lexer. Then we had SQL tokens in the correct order which passed the lexer and parser, but not the semantic (type) checker. In order to cross that hurdle, we would need something that was aware of types, tables, columns, and their availability in different scopes. This is somewhat revisionist history, since at the time we didn’t realize this. But looking backward the progression is clear. Compilers have similar architectures. In the below diagram, this would be like being able to make it past all of the analyzer stages and into code generation.
 
-<img src="/images/compilerdesign.jpg" alt="phases of a compiler">
+<img src="/public/images/compilerdesign.jpg" alt="phases of a compiler">
 ([source](https://www.geeksforgeeks.org/compiler-design-phases-compiler/))
 
 ## SQLsmith

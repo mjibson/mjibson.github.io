@@ -1,14 +1,16 @@
 ---
 title: "Go Read: Open-Source Google Reader Clone"
 date: 2013-06-26
-slug: "goread"
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 I would like to announce the release of [Go Read](http://www.goread.io). It as a Google Reader clone, and designed to be close to its simplicity and cleanliness. I wanted to build something as close to Google Reader as made sense for one person to build in a few months. Since the announcement, numerous clones have been written, and some existing ones were made known. I tried most of them and disliked them for various reasons. It seemed interesting and fun to make my own that would serve exactly my needs. I hope others find it useful.
 
 [Try it out:](http://www.goread.io)
 
-[<img style="width: 100%" src="/images/goread-all.png">](http://www.goread.io/)
+[<img style="width: 100%" src="/public/images/goread-all.png">](http://www.goread.io/)
 
 Specifically, I wanted:
 

@@ -1,9 +1,9 @@
 ---
 title: "How I got a job at Stack Overflow"
 date: 2012-04-28
-slug: "stack-overflow-job"
-aliases:
-  - /blog/2012/04/28/how-i-got-a-job-at-stack-overflow/
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 I just got a job at [Stack Exchange](http://stackexchange.com/). The experience was interesting enough and I learned a few things that could be valuable to others.

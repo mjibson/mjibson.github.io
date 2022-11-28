@@ -1,7 +1,9 @@
 ---
 title: "Implementing moggio: a cross-platform, multi-source music player in Go"
 date: 2016-02-29
-slug: "moggio"
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 Today I am announcing the release of [moggio 0.1.0](http://mogg.io/). moggio
@@ -12,8 +14,8 @@ formats (MP3, Vorbis, etc.). Writing a cross-platform GUI application that
 also needed access to the sound hardware was a new problem for me, and I
 would like to share what I learned.
 
-[<img src="/images/moggio.png" style="width:
-100%">](/images/moggio.png)
+[<img src="/public/images/moggio.png" style="width:
+100%">](/public/images/moggio.png)
 
 # Motivation
 

@@ -1,9 +1,9 @@
 ---
 title: "Time-Travel Queries: SELECT witty_subtitle FROM THE FUTURE"
 date: 2016-06-22
-slug: "time-travel-queries"
-aliases:
-  - /blog/2016/06/22/time-travel-queries/
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 *(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/time-travel-queries-select-witty_subtitle-the_future/).)*

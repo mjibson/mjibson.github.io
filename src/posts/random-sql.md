@@ -1,9 +1,9 @@
 ---
 title: "Testing CockroachDB: Generating Random (Valid) SQL"
 date: 2016-10-19
-slug: "random-sql"
-aliases:
-  - /blog/2016/10/19/testing-cockroachdb-generating-random-valid-sql/
+tags:
+  - posts
+layout: layouts/post.njk
 ---
 
 _(Also published on the [Cockroach Labs Blog](https://www.cockroachlabs.com/blog/testing-random-valid-sql-in-cockroachdb/).)_
@@ -18,11 +18,11 @@ CockroachDB’s SQL grammar is defined in a [YACC grammar](https://github.com/co
 
 With the AST in memory [^1], a program was created that would take some top-level statement and choose one valid possibility for it to become, then repeat itself until there was nothing to change. This works by looking for [non-terminals](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols#Nonterminal_symbols) in the grammar and replacing them with any branch the non-terminal represents. For example, say we start with a [grant statement](https://www.cockroachlabs.com/docs/sql-grammar.html#grant_stmt). The non-terminals are `privileges`, `privilege_target`, and `grantee_list`.
 
-<img src="/images/grant.png" alt="grant grammar diagram">
+<img src="/public/images/grant.png" alt="grant grammar diagram">
 
 We can replace `privileges` with one of [its possibilities](https://www.cockroachlabs.com/docs/sql-grammar.html#privileges): `ALL`, or `privilege_list`.
 
-<img src="/images/privileges.png" alt="privileges grammar diagram">
+<img src="/public/images/privileges.png" alt="privileges grammar diagram">
 
 One of those is randomly chosen, and the loop continues. Some tokens can loop back into themselves, so there is a restriction to prevent too many replacements before giving up. The statement is done when there are no tokens left, only literals (keywords, punctuation), identifiers (table or database names), or things like string or float constants.
 
