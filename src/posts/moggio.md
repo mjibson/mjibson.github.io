@@ -14,8 +14,8 @@ formats (MP3, Vorbis, etc.). Writing a cross-platform GUI application that
 also needed access to the sound hardware was a new problem for me, and I
 would like to share what I learned.
 
-[<img src="/public/images/moggio.png" style="width:
-100%">](/public/images/moggio.png)
+[<img src="https://cdn.glitch.global/08c0c16c-42ba-47bd-aa4b-fdab79602d49/moggio.png?v=1669682097101" style="width:
+100%">](https://cdn.glitch.global/08c0c16c-42ba-47bd-aa4b-fdab79602d49/moggio.png?v=1669682097101)
 
 # Motivation
 

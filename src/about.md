@@ -12,7 +12,7 @@ Previously:
 * [github](https://github.com/mjibson/)
 * <a href="https://hachyderm.io/@mjibson" rel="me">mastadon</a>
 * [twitter](https://twitter.com/mjibson)
-* [resume](/public/resume.pdf)
+* [resume](https://cdn.glitch.global/08c0c16c-42ba-47bd-aa4b-fdab79602d49/resume.pdf?v=1669681792756)
 
 ### Projects
 
@@ -23,7 +23,7 @@ Previously:
 * [fittin.gs](https://github.com/mjibson/fittin.gs) Eve Online fittings database (shut down)
 * [hots.dog](https://github.com/mjibson/hots.dog/) Heroes of the Storm stats aggregator (shut down)
 * [go read](https://github.com/mjibson/goread) Google Reader-like RSS reader (shut down)
-* [Organ Sound Synthesis by Harmonic Interpolation](/public/pubs/schalmei/schalmei.pdf)
+* [Organ Sound Synthesis by Harmonic Interpolation](https://cdn.glitch.global/08c0c16c-42ba-47bd-aa4b-fdab79602d49/schalmei.pdf?v=1669681819803)
 
 ### Talks
 
